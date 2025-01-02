@@ -7,13 +7,11 @@ import Newfn from './newjs'
 
 function App() {
   const [count, setCount] = useState(0)
-
   return (
     <>
     <Newfn/>
     <h1>Shijin</h1>
-    </>
-    
+    </> 
   )
 }
 
