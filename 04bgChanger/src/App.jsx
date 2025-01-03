@@ -4,31 +4,23 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [color,setColor] = useState("red")
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+
+      <div className='w-full h-screen' 
+      style={{backgroundColor:color}}>
+        <div className='fixed flex flex-wrap justify-center  bg-white bottom-12 rounded-xl py-2 px-2 left-1/2 transform -translate-x-1/2'> 
+          <div className='flex flex-wrap justify-center gap-3 shadow-sm'>
+          <button onClick={() => {console.log("Changing color to green"); setColor("green");}} className='bg-green-500 px-4 py-2 rounded-xl'>Green</button>
+          <button onClick={() => setColor("blue")} className='bg-blue-600 px-4 py-2 rounded-xl'>Blue</button>
+          <button onClick={() => setColor("yellow")} className='bg-yellow-500 px-4 py-2 rounded-xl'>Yellow</button>
+          <button onClick={() => setColor("orange")} className='bg-orange-500 px-4 py-2 rounded-xl'>Orange</button>
+          <button onClick={() => setColor("slategray")} className='bg-slate-600 px-4 py-2 rounded-xl'>Slate</button>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    
   )
 }
 
