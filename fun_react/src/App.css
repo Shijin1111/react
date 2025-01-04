@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('path/to/jetbrains-mono.woff2') format('woff2'),
+       url('path/to/jetbrains-mono.woff') format('woff');
+  font-weight: 400; /* Adjust for different weights */
+  font-style: normal;
+}
