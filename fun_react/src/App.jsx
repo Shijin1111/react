@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div style={{width:500,margin: '0 auto', 
+    <div style={{width:600,margin: '0 auto', 
       padding: '20px',
       backgroundColor: '#f9f9f9', 
       border: '1px solid #ccc',
@@ -16,7 +16,7 @@ function App() {
       <img src={reactLogo} width={100} />
       
       <h2>Fun facts about React</h2>
-      <ul style={{listStyleType:'none'}}>
+      <ul style={{listStyleType:'square',textAlign:'center'}}>
           <li>React was created by Jordan Walke, a software engineer at Facebook, in 2011.</li>
           <li>It was first used for Facebook's News Feed and later for Instagram in 2012.</li>
           <li>React uses a virtual DOM to improve performance by minimizing direct manipulations of the real DOM.</li>
