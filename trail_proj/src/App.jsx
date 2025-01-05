@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-
+import './App.css';
 function App() {
   useEffect(() => {
     // Disable scrolling by applying styles directly to body
@@ -14,6 +14,7 @@ function App() {
   return (
     <>
       <div
+        className='orbitron-shijin' 
         style={{
           position: 'relative',
           height: '100vh',
@@ -34,8 +35,8 @@ function App() {
           }}
         />
         <div>
-          <h1>Shijin</h1>
-          <p style={{color:'white',
+        <h1 style={{ }}>Shijin</h1>
+        <p style={{color:'black',
             fontSize:20}}><b>Welcome to My Homepage
 Use the menu to select different Stylesheets
 

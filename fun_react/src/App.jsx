@@ -7,12 +7,14 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div style={{width:600,margin: '0 auto', 
+    <div 
+      style={{width:600,margin: '0 auto', 
       padding: '20px',
       backgroundColor: '#f9f9f9', 
       border: '1px solid #ccc',
       borderRadius: '8px',
-      boxShadow: '0 4px 8px rgba(0, 0, 1, 0.1)',}}>
+      boxShadow: '0 4px 8px rgba(0, 0, 1, 0.1)',
+      }}>
       <img src={reactLogo} width={100} />
       
       <h2>Fun facts about React</h2>

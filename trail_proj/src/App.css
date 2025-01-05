@@ -40,3 +40,24 @@
 .read-the-docs {
   color: #888;
 } */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Knewave&family=Orbitron:wght@400..900&family=Patua+One&display=swap');
+.black-ops-one-regular {
+  font-family: "Black Ops One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.patua-one-regular {
+  font-family: "Patua One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.orbitron-shijin {
+  font-family: "Orbitron", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
