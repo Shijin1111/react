@@ -1,0 +1,16 @@
+.Header{
+    position: fixed;
+    top: 0;
+    left: 3%;
+    width: 94%;
+    background-color: brown;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+img{
+    margin: 10px;
+    border-radius: 10px;
+    width: 6%;
+}
