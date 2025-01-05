@@ -29,7 +29,15 @@ function App() {
   return (
     <>
       <div>
-        <h1>shijin</h1>
+        <div style={{display:'flex',flexDirection:'row'}}>
+          <h1 style={{margin:30}}>SHIJIN</h1>
+          <ul style={{display:'flex',listStyle:"none",marginLeft:'auto',fontSize:30}}>
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        
         <div style={{
           border: 'solid', 
           borderColor: 'rgb(0, 0, 0)', 
