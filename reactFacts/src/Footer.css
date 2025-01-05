@@ -1,0 +1,19 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    margin: center;
+    width: 70%;
+    margin: auto;
+    align-content: center;
+    margin-top: 60px;
+}
+h2{
+    margin:auto;
+}
+ul{
+    margin: auto;
+    list-style-type: none;
+}
+li{
+    text-align: center;
+}
