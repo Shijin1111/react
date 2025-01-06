@@ -1,0 +1,26 @@
+.entry {
+    display: flex;
+    flex-direction: row;
+    /* position: absolute; */
+    left: 3%;
+    width: 94%;
+    background-color: rgb(118, 199, 250);
+    border-radius: 20px;
+    margin-top: 110px; 
+    margin-left: 3%;
+}
+h2{
+    margin : 0%;
+    /* margin-top: 1%; */
+    margin-left: 5px;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+}
+
+p{
+    margin-top: 1%;
+}
