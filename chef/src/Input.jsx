@@ -1,5 +1,10 @@
-
+import { useState } from "react"
 export default function Input() {
+    const ingredients = ["a","b","c"]
+    const ingredientsList = ingredients.map(ingredient=>(
+        <li key={ingredients}>{ingredient}</li>
+    ))
+    const [result,fn] = useState("Yes")
     return (
         <main>
             <form className="add-ingredient-form">
@@ -8,8 +13,12 @@ export default function Input() {
                     placeholder="e.g. oregano"
                     aria-label="Add ingredient"
                 />
-                <button>Add ingredient</button>
+                <button>{result}</button>
             </form>
+            <ul>
+                {ingredientsList}
+            </ul>
+
         </main>
     )
 }
