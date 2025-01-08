@@ -36,7 +36,7 @@ export default function Input() {
             <ul>
                 {ingredientsList}
             </ul>
-
+            
         </main>
     )
 }
