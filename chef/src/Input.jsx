@@ -8,13 +8,14 @@ export default function Input() {
     ))
     const [result,fn] = useState("Yes")
 
-    function handleSubmit(event)
+    function handleSubmit(formdata)
     {
-        event.preventDefault()
-        const formdata = new FormData(event.currentTarget)
+        // event.preventDefault()
+        // const formdata = new FormData(event.currentTarget)
         const newingredient = formdata.get("ingredient")
         setingredients(prevIngredients => [...prevIngredients,newingredient])
-
+        console.log(formdata.get("ingredient"))
+        // formdata.reset()
     }
 
     
@@ -23,7 +24,7 @@ export default function Input() {
 
     return (
         <main>
-            <form  onSubmit={handleSubmit} className="add-ingredient-form">
+            <form  action={handleSubmit} className="add-ingredient-form">
                 <input 
                     type="text"
                     name="ingredient" // Added name attribute

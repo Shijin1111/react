@@ -3,12 +3,13 @@ import './App.css';
 
 function App() {
   function signUp(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); 
     const formdata = new FormData(event.currentTarget);
     const email = formdata.get("email");
     const password = formdata.get("pswd");
     console.log("Email:", email);
     console.log("Password:", password);
+    event.reset()
   }
 
   return (
