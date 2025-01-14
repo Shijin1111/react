@@ -8,6 +8,18 @@ export default function Main() {
         randomImg: "http://i.imgflip.com/1bij.jpg",
     })
 
+    function handleChange(event)
+    {
+        const {value} = event.target
+        // or just do this ::  const value = event.target.value
+        setmeme((prev)=>{
+            return {
+                ...prev,
+                topText: value
+            }
+        })
+    }
+
     return (
         <main>
             <div className="form">
@@ -16,6 +28,7 @@ export default function Main() {
                         type="text"
                         placeholder="One does not simply"
                         name="topText"
+                        onChange={handleChange}
                     />
                 </label>
 
