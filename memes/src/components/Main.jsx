@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Main() {
 
@@ -6,6 +6,20 @@ export default function Main() {
         topText: "",
         bottomText: "",
         randomImg: "http://i.imgflip.com/1bij.jpg",
+    })
+
+    useEffect(()=>{
+        fetch("https://api.imgflip.com/get_memes")
+        .then(response => response.json())
+        .then(response => {
+            const {memes} = response.data
+            setmeme((prev)=>{
+                return {
+                    ...prev,
+                    randomImg: memes[0].url
+                }
+            })
+        })
     })
 
     function handleChange(event)
