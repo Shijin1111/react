@@ -1,6 +1,7 @@
 import { useState } from "react"
 import CloudRecipe from "./cloudRecipe"
 import Ingredients from "./Ingredients"
+import { useRef } from "react"
 export default function Input() {
     const [ingredients,setingredients] = useState(["all the main species","pasta","ground beens","tomato paste"])
     const [recipeShown,setRecipeShown] = useState(false)
@@ -12,7 +13,8 @@ export default function Input() {
         <li key={index}>{ingredient}</li>
     ))
     const [result,fn] = useState("Yes")
-
+    const recipeSection = useRef(null)
+    console.log(recipeSection)
     function handleSubmit(formdata)
     {
         // event.preventDefault()
@@ -44,7 +46,8 @@ export default function Input() {
             />
             }
 
-        { recipeShown  && <CloudRecipe />}
+        { recipeShown  && <CloudRecipe 
+                            ref = {recipeSection}/>}
         </main>
     )
 }
