@@ -2,19 +2,26 @@ import { useState } from "react"
 import CloudRecipe from "./cloudRecipe"
 import Ingredients from "./Ingredients"
 import { useRef } from "react"
+import { useEffect } from "react"
 export default function Input() {
     const [ingredients,setingredients] = useState(["all the main species","pasta","ground beens","tomato paste"])
     const [recipeShown,setRecipeShown] = useState(false)
     function toggleRecipe(event){
         event.preventDefault();
-        setRecipeShown(prev=>true)
+        setRecipeShown(prev=>!prev)
     }
     const ingredientsList = ingredients.map((ingredient,index)=>(
         <li key={index}>{ingredient}</li>
     ))
     const [result,fn] = useState("Yes")
+    console.log(result)
     const recipeSection = useRef(null)
-    console.log(recipeSection)
+    useEffect(()=>{
+        if(recipeShown === true && recipeSection.current !=null)
+        {
+            recipeSection.current.scrollIntoView({behavior:"smooth"})
+        }
+    },[recipeShown])
     function handleSubmit(formdata)
     {
         // event.preventDefault()
