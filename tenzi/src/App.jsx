@@ -20,8 +20,8 @@ function App() {
       <main>
         <div className='dice-container'>
           {generateAllNewDice()}
-
         </div>
+        <button className='roll-button'>Roll</button>
       </main>
     </>
   )
