@@ -1,6 +1,6 @@
 function Die(props){
     return(
-        <button>{props.value}</button>
+        <button><b>{props.value}</b></button>
     )
 }
 export default Die;

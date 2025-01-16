@@ -6,6 +6,8 @@ import Die from './Die'
 
 function App() {
 
+  const [Dice,setDice] = useState(generateAllNewDice());
+
   function generateAllNewDice(){
     const newDice = []
     for (let i = 0; i < 10; i++) {
@@ -14,14 +16,16 @@ function App() {
     }
     return newDice;
   }
-
+  function rollDice(){
+    setDice(generateAllNewDice());
+  }
   return (
     <>
       <main>
         <div className='dice-container'>
           {generateAllNewDice()}
         </div>
-        <button className='roll-button'>Roll</button>
+        <button onClick={rollDice} className='roll-button'>Roll</button>
       </main>
     </>
   )
