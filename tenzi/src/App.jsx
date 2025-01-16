@@ -5,22 +5,21 @@ import './App.css'
 import Die from './Die'
 
 function App() {
-  const [count, setCount] = useState(0)
-  
+
+  function generateAllNewDice(){
+    const newDice = []
+    for (let i = 0; i < 10; i++) {
+      const randNum = Math.ceil(Math.random()*6);
+      newDice.push(<Die value={randNum} key={i} />)
+    }
+    return newDice;
+  }
+
   return (
     <>
       <main>
         <div className='dice-container'>
-          <Die value={1} />
-          <Die value={1} />
-          <Die value={1} />
-          <Die value={1} />
-          <Die value={1} />
-          <Die value={1} />
-          <Die value={1} />
-          <Die value={1} />
-          <Die value={1} />
-          <Die value={1} />
+          {generateAllNewDice()}
 
         </div>
       </main>
