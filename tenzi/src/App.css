@@ -24,4 +24,23 @@ main {
   background-color: #F5F5F5;
   height: 100%;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice-container{
+  display: grid;
+  grid-template : auto auto / repeat(5, 1fr);
+  gap: 20px;
+}
+
+.dice-container button{
+  width: 60px;
+  height: 60px;
+  box-shadow: inset 0 0 10px #c89c9c;
+  font-size: 1.5rem;
+  background-color: #F5F5F5;
+  cursor: pointer;
 }

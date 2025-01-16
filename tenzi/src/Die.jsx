@@ -1,8 +1,6 @@
 function Die(props){
     return(
-        <div>
-            <h1>{props.num}</h1>
-        </div>
+        <button>{props.value}</button>
     )
 }
 export default Die;
