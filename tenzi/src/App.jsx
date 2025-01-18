@@ -5,7 +5,7 @@ import Die from './Die';
 function App() {
   // State to store dice data
   const [dice, setDice] = useState(generateAllNewDice());
-
+  const [Tenzies, setTenzies] = useState(false);
   // Function to generate new dice data
   function generateAllNewDice() {
     const newDice = [];
@@ -40,6 +40,8 @@ function App() {
     );
   }
 
+  const gameWon = (dice.every(die=> die.isHeld) && dice.every(die=> die.value === dice[0].value));
+
   return (
     <>
       <main>
@@ -56,7 +58,7 @@ function App() {
           ))}
         </div>
         <button onClick={rollDice} className="roll-button">
-          Roll
+          {gameWon?"New Game":"Roll"}
         </button>
       </main>
     </>
