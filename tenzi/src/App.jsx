@@ -43,6 +43,8 @@ function App() {
   return (
     <>
       <main>
+        <h1>Tenzies</h1>
+        <p>Roll untill all the dies are the same</p>
         <div className="dice-container">
           {dice.map((die) => (
             <Die
