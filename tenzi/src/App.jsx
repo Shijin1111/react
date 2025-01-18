@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Die from './Die';
-
+import Comfetti from 'react-confetti';
 function App() {
   // State to store dice data
   const [dice, setDice] = useState(generateAllNewDice());
@@ -45,6 +45,7 @@ function App() {
   return (
     <>
       <main>
+        {gameWon && <Comfetti />}
         <h1>Tenzies</h1>
         <p>Roll untill all the dies are the same</p>
         <div className="dice-container">
