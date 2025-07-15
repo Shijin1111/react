@@ -4,8 +4,8 @@ import { useState } from 'react';
 function EffectExample() {
     const [count, setCount] = useState(0);
     useEffect(()=>{
-        console.log("Component mounted ");
-    },[]);
+        console.log("Current count is: ", count);
+    },[count]);
     return (
         <div>
             <h1>Count: {count}</h1>
