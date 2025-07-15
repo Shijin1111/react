@@ -6,12 +6,15 @@ import Greetingcard from './components/Greetingcard'
 import Like_togglemsg from './components/Like_togglemsg'
 import UserForm from './components/UserForm'
 import EffectExample from './components/EffectExample'
+import UserFetcher from './components/UserFetcher'
+import Timer from './components/Timer'
 
 function App() {
   return(
     
     <div>
         <h2>Vite + React</h2>
+        <Timer />
         <EffectExample/>
         <UserForm />
       <Like_togglemsg />
