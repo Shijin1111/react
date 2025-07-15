@@ -3,12 +3,15 @@ import { useState } from "react";
 function UserForm(){
     const [name,setName] = useState("");
     const[email,setMail] = useState("");
+    const [msg, setMsg] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
         alert(`Name:${name}, Email: ${email}`);
         setName("");
         setMail("");
+        setMsg("");
+
     }
 
     return(
@@ -23,8 +26,15 @@ function UserForm(){
                     <label>Email:</label>
                     <input type="email" value={email} onChange={(e)=>{setMail(e.target.value)}} />
                 </div>
+                <div>
+                    <label>MESSAGE:</label>
+                    <input type="text" value={msg} onChange={(e)=>{setMsg(e.target.value)}} />
+                </div>
                 <button type="submit" style={{ marginTop: '10px' }}>Submit</button>
             </form>
+            <h4 style={{ marginTop: '10px' }}> Name: {name}</h4>
+            <h4> Email: {email}</h4>
+            <h4> Message: {msg}</h4>
         </div>
     )
 }
