@@ -8,19 +8,22 @@ import UserForm from './components/UserForm'
 import EffectExample from './components/EffectExample'
 import UserFetcher from './components/UserFetcher'
 import Timer from './components/Timer'
+import { UserProvider } from './components/UserContext'
+import UserProfile from './components/UserProfile'
 
 function App() {
   return(
     
     <div>
         <h2>Vite + React</h2>
-        <Timer />
-        <EffectExample/>
+        <UserProfile />
+        {/* <Timer /> */}
+        {/* <EffectExample/>
         <UserForm />
       <Like_togglemsg />
       <Greetingcard name="Shijin" /><br />
       <Greetingcard name="John" /><br />
-      <Greetingcard name="Jane" /><br />
+      <Greetingcard name="Jane" /><br /> */}
     </div>
   );
 }
